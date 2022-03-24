@@ -103,6 +103,7 @@ def inpaint(image, mask, output='output.png', checkpoint_path='', flow = '', ite
                 if flow:
                     vutils.save_image(offset_flow, flow, padding=0, normalize=True)
                     print("Saved offset flow to {}".format(flow))
+                return inpainted_result
             else:
                 raise TypeError("{} is not an image file.".format)
         # exit no grad context
